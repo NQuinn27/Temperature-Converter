@@ -1,3 +1,5 @@
+package com.groupg.temperature.converter;
+
 /*
  * Copyright 2016 Niall Quinn.
  */

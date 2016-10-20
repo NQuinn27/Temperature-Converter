@@ -10,15 +10,15 @@
         </session-timeout>
     </session-config>
     <servlet>
-        <servlet-name>rest</servlet-name>
-        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <servlet-name>rest</servlet-name> 
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class> 
         <init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>com.mycompany.jerseyexample</param-value>
+            <param-value>com.groupg.temperature.converter</param-value> 
         </init-param>
-    </servlet>
+    </servlet> 
     <servlet-mapping>
         <servlet-name>rest</servlet-name>
-        <url-pattern>/api/*</url-pattern>
+        <url-pattern>/api/*</url-pattern> 
     </servlet-mapping>
 </web-app>

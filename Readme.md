@@ -17,15 +17,23 @@ Run the project to start the server.
 ### Convert Celcius to Fahrenheit  
 
 ```bash
-curl -H "Accept:text/html" -X GET http://localhost:8080/convert/cel2far/32
+curl -H "Accept:text/html" -X GET http://localhost:8080/api/cel2far/32
 ```  
+Returns HTML response  
 
-Returns HTML response
+```bash
+curl -H "Accept:application/json" -X GET http://localhost:8080/api/cel2far/32
+``` 
+Returns JSON response  
 
 ### Convert Fahrenheit to Celcius  
 
 ```bash
-curl -H "Accept:text/html" -X GET http://localhost:8080/convert/far2cel/32
+curl -H "Accept:text/html" -X GET http://localhost:8080/api/far2cel/32
 ```  
-
 Returns HTML response  
+
+```bash
+curl -H "Accept:application/json" -X GET http://localhost:8080/api/far2cel/32
+``` 
+Returns JSON response 

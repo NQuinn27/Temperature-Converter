@@ -195,7 +195,7 @@ public class MainWindow extends javax.swing.JFrame {
             double celValue = Double.parseDouble(celciusString);
 
             CloseableHttpClient httpclient = HttpClients.createDefault();
-            HttpGet httpGet = new HttpGet("http://localhost:8080/convert/cel2far/" + celValue);
+            HttpGet httpGet = new HttpGet("http://localhost:8080/api/cel2far/" + celValue);
             httpGet.setHeader(HttpHeaders.CONTENT_TYPE, "application/json");
             CloseableHttpResponse response1 = httpclient.execute(httpGet);
             try {
@@ -235,7 +235,7 @@ public class MainWindow extends javax.swing.JFrame {
             double celValue = Double.parseDouble(celciusString);
 
             CloseableHttpClient httpclient = HttpClients.createDefault();
-            HttpGet httpGet = new HttpGet("http://localhost:8080/convert/far2cel/" + celValue);
+            HttpGet httpGet = new HttpGet("http://localhost:8080/api/far2cel/" + celValue);
             httpGet.setHeader(HttpHeaders.CONTENT_TYPE, "application/json");
             CloseableHttpResponse response1 = httpclient.execute(httpGet);
             try {

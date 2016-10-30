@@ -37,3 +37,20 @@ Returns HTML response
 curl -H "Accept:application/json" -X GET http://localhost:8080/api/far2cel/32
 ``` 
 Returns JSON response 
+
+### Add User to the System  
+To add a user to the system, send a POST request as follows, where the params 'firstName' and 'lastName' are those of the new user.  
+```bash
+curl -X POST http://localhost:8080/api/user/add\?firstName\=Joe\&lastName\=Bloggs
+```   
+
+To view the list of users in storage, use the following request:  
+```bash
+curl -X GET http://localhost:8080/api/user/list
+```  
+
+### Return a random string of length  
+To recieve a random string of chosen length, send the following request, where the final pathParam is the required length, and is a positive integer
+```bash
+curl -X GET http://localhost:8080/api/ranString/10
+``` 

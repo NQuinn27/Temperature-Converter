@@ -52,5 +52,5 @@ curl -X GET http://localhost:8080/api/user/list
 ### Return a random string of length  
 To recieve a random string of chosen length, send the following request, where the final pathParam is the required length, and is a positive integer
 ```bash
-curl -X GET http://localhost:8080/api/ranString?length\=10
+curl -X GET http://localhost:8080/api/ranString\?length\=10
 ``` 

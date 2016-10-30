@@ -20,17 +20,17 @@ public class RandomStringService {
     @Path("/{param}")
     public Response returnRandomString(@PathParam("param") String message) {
         if (message.length() == 0) {
-            return Response.status(500).entity("Invalid Param 1").build();
+            return Response.status(500).entity("Invalid Param: Input is length 0").build();
         }
         try {
             int inputLength = Integer.parseInt(message);
             if (inputLength < 1) {
-                return Response.status(500).entity("Invalid Param 2").build();
+                return Response.status(500).entity("Invalid Param: Input is not a number").build();
             }
             String res = randomStringOfLength(inputLength);
             return Response.status(200).entity(res).build();
         } catch (NumberFormatException e) {
-            return Response.status(500).entity("Invalid Param 3" + e.getLocalizedMessage()).build();
+            return Response.status(500).entity("Invalid Param: Error when parsing number: " + e.getLocalizedMessage()).build();
         }
     }
 

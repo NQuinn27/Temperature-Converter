@@ -1,18 +1,17 @@
 # NCI BSc(Hons) in Computing - Year 4 - Web Services & API Development
 
-## Assignment 4
+## Group G Assignment 4  
 
 ## Contributors
-  - Niall Quinn
-  - Ciaran Byrne
-  - Eoin Sutton
-  - John O'Shea
-
-## Contributing
-Work on a branch. When item is completed submit a pull request to merge branch into master. Master is a protected branch to prevent force pushing to master.  
+  - Niall Quinn - 13108727  
+  - Ciaran Byrne - 13109740  
+  - Eoin Sutton - 13116053  
+  - John O'Shea -  13104977  
 
 ## Running the project  
 Run the project to start the server.  
+
+## Main Project  
 
 ### Convert Celcius to Fahrenheit  
 
@@ -23,7 +22,7 @@ Returns HTML response
 
 ```bash
 curl -H "Accept:application/json" -X GET http://localhost:8080/api/cel2far/32
-``` 
+```
 Returns JSON response  
 
 ### Convert Fahrenheit to Celcius  
@@ -35,8 +34,10 @@ Returns HTML response
 
 ```bash
 curl -H "Accept:application/json" -X GET http://localhost:8080/api/far2cel/32
-``` 
-Returns JSON response 
+```
+Returns JSON response
+
+## Extra Pieces    
 
 ### Add User to the System  
 To add a user to the system, send a POST request as follows, where the params 'firstName' and 'lastName' are those of the new user.  
@@ -53,4 +54,4 @@ curl -X GET http://localhost:8080/api/user/list
 To recieve a random string of chosen length, send the following request, where the final pathParam is the required length, and is a positive integer
 ```bash
 curl -X GET http://localhost:8080/api/ranString\?length\=10
-``` 
+```

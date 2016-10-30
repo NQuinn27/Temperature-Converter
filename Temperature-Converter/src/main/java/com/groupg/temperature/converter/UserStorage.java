@@ -89,9 +89,9 @@ public class UserStorage {
         sb.append("Users : {\n");
         for (User u : userList) {
             sb.append("\t{\n")
-            .append("\t\tfirstName : " + u.firstName + ",\n")
-            .append("\t\tlastName : " + u.lastName + ",\n")
-            .append("\t\tid : " + u.id.toString() + "\n")
+            .append("\t\tfirstName : " + u.getFirstName() + ",\n")
+            .append("\t\tlastName : " + u.getLastName() + ",\n")
+            .append("\t\tid : " + u.getId().toString() + "\n")
             .append("\t}\n");
         }
         sb.append("}");

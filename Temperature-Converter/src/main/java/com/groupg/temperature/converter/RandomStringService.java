@@ -11,19 +11,19 @@ import java.util.Random;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 @Path("/ranString")
 public class RandomStringService {
 
     @GET
-    @Path("/{param}")
-    public Response returnRandomString(@PathParam("param") String message) {
-        if (message.length() == 0) {
+    public Response returnRandomString(@QueryParam("length") String length) {
+        if (length == null || length.length() == 0) {
             return Response.status(500).entity("Invalid Param: Input is length 0").build();
         }
         try {
-            int inputLength = Integer.parseInt(message);
+            int inputLength = Integer.parseInt(length);
             if (inputLength < 1) {
                 return Response.status(500).entity("Invalid Param: Input is not a number").build();
             }

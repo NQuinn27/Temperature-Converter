@@ -12,9 +12,9 @@ import java.util.UUID;
  */
 public class User implements Serializable {
 
-    String firstName;
-    String lastName;
-    UUID id;
+    private String firstName;
+    private String lastName;
+    private UUID id;
     
     public User(String firstName, String lastName) {
         this.firstName = firstName;
